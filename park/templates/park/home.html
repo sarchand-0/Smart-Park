@@ -1,0 +1,114 @@
+{% extends 'park/main.html'%}
+{% load static %}
+{% block content %}
+<section class="py-5">
+    <div class="container px-5">
+        <div class="card border-0 shadow rounded-3 overflow-hidden">
+            <div class="card-body p-0">
+                <div class="row gx-0">
+                    <div class="col-lg-6 col-xl-5 py-lg-5">
+                        <div class="p-4 p-md-5">
+                            <div class="h2 fw-bolder">Find A Free Parking Space</div>
+                            <p> See where you can park on our live feed.</p>
+                            <a class="stretched-link text-decoration-none" href="{% url 'vid' %}">
+                                Full Feed
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xl-7">
+                        <div class="bg-featured-blog" >
+                            <img src="{%static 'assets/img.png'%}" width="700px" height="350">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="row">
+        <div class="col">
+            <div class="col-md yellow">
+                <div class="card text-center text-dark  mb-3" id="total-Space">
+                    <div class="card-header">
+                        <h5 class="card-title">Total Spaces</h5>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">{{total_space}}</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="col-md red">
+                <div class="card text-center text-dark  mb-3" id="Occupied-Spaces">
+                    <div class="card-header">
+                        <h5 class="card-title">Occupied Spaces</h5>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">{{occupied}}</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="col-md green">
+                <div class="card text-center text-dark  mb-3" id="Free-Spaces">
+                    <div class="card-header">
+                        <h5 class="card-title">Free Spaces</h5>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">{{free}}</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="section">
+    <div class="title">
+        <h2>Meet The Team</h2>
+    </div>
+    <br>
+    <br>
+    <div class="card-deck">
+        <div class="card">
+            <img class="card-img-top" src="{%static 'assets/bob.jpg'%}" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Bobby Basnet</h5>
+                <p class="card-text">Worked on Backend and pi integration.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img class="card-img-top" src="{%static 'assets/pandu.jpg'%}" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Aniket Raj Pandey</h5>
+                <p class="card-text">Worked on pi integration and video presentation.</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img class="card-img-top" src="{%static 'assets/rogi.jpg'%}" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Aarogya Rijal</h5>
+                <p class="card-text">Worked on image processing and pi integration.</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img class="card-img-top" src="{%static 'assets/sarthak.jpg'%}" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Sarthak Chand</h5>
+                <p class="card-text">A freshmen at Clark Unversity, who had an amazing time making this project. Worked on the Front and the Backend of the website. </p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+{%endblock%}

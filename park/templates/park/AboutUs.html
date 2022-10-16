@@ -1,0 +1,46 @@
+{% extends 'park/main.html'%}
+{% load static %}
+{% block content %}
+
+
+<div class="section">
+    <div class="title">
+        <h2>Meet The Team</h2>
+    </div>
+    <br>
+    <br>
+    <div class="card-deck">
+        <div class="card">
+            <img class="card-img-top" src="{%static 'assets/bob.jpg'%}" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Bobby Basnet</h5>
+                <p class="card-text">Worked on Backend and pi integration.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img class="card-img-top" src="{%static 'assets/pandu.jpg'%}" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Aniket Raj Pandey</h5>
+                <p class="card-text">Worked on pi integration and video presentation.</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img class="card-img-top" src="{%static 'assets/rogi.jpg'%}" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Aarogya Rijal</h5>
+                <p class="card-text">Worked on image processing and pi integration.</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img class="card-img-top" src="{%static 'assets/sarthak.jpg'%}" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Sarthak Chand</h5>
+                <p class="card-text">A freshmen at Clark Unversity, who had an amazing time making this project. Worked on the Front and the Backend of the website. </p>
+
+            </div>
+        </div>
+    </div>
+</div>
+{%endblock%}

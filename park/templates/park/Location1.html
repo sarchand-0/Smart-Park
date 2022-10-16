@@ -1,0 +1,113 @@
+{% extends 'park/main.html'%}
+{% load static %}
+{% block content %}
+<section>
+    <br>
+    <br>
+    <div class="container px-5">
+        <div class="card border-0 shadow rounded-3 overflow-hidden">
+            <div class="card-body p-0" style="background:#EBECF0">
+
+                <br>
+                <br>
+                <br>
+                <div class="title">
+                    <h2>Location 1</h2>
+                </div>
+                <br>
+                <br>
+                <div class="row gx-0">
+                    <br>
+                    <br>
+                    <br>
+                    <section>
+                        <div class="row">
+                            <div class="col">
+                                <div class="col-md yellow">
+                                    <div class="card text-center text-dark  mb-3" id="total-Space">
+                                        <div class="card-header">
+                                            <h5 class="card-title">Total Spaces</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <h3 class="card-title style='color: #000'">{{total_space}}</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="col-md red">
+                                    <div class="card text-center text-dark  mb-3" id="Occupied-Spaces">
+                                        <div class="card-header">
+                                            <h5 class="card-title">Occupied Spaces</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <h3 class="card-title">{{occupied}}</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="col-md green">
+                                    <div class="card text-center text-dark  mb-3" id="Free-Spaces">
+                                        <div class="card-header">
+                                            <h5 class="card-title">Free Spaces</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <h3 class="card-title">{{free}}</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <div class="col-lg-6 col-xl-5 py-lg-5">
+                        <div class="p-4 p-md-5">
+                            <br>
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Slot</th>
+                                        <th scope="col">State</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                {% for i in state %}
+                                    {% if i == "free" %}
+                                    <tr style="background:green">
+
+                                        <td>{{ forloop.counter }}</td>
+
+                                            <td >{{i}}</td>
+                                    {%else%}
+                                        <tr style="background:red">
+
+                                        <td>{{ forloop.counter }}</td>
+                                            <td >{{i}}</td>
+
+                                    </tr >
+                                    {%endif%}
+                                {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xl-7">
+                        <iframe src="file:///C:/Users/sarth/OneDrive/Desktop/hack/ParkNearMe/mapp/parkingmap/view.html"></iframe>
+                        <div class="bg-featured-blog" style="background-image: url('https://dummyimage.com/700x350/343a40/6c757d')">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<br>
+<br>
+
+{%endblock%}

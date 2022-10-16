@@ -1,0 +1,201 @@
+{% extends 'park/main.html'%}
+{% load static %}
+{% block content %}
+
+<section>
+
+    <div class="container">
+            <div class="offer border" style="background:#EBECF0">
+                <div class="small-container">
+                    <div class ="row">
+                        <div class="title">
+                            <h2>Parking Space 1</h2>
+                        </div>
+                    </div>
+                    <br>
+
+                    <section>
+                        <div class="row">
+                            <div class="col">
+                                <div class="col-md yellow">
+                                    <div class="card text-center text-dark  mb-3" id="total-Space">
+                                        <div class="card-header">
+                                            <h5 class="card-title">Total Spaces</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <h3 class="card-title style='color: #000'">{{total_space}}</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="col-md red">
+                                    <div class="card text-center text-dark  mb-3" id="Occupied-Spaces">
+                                        <div class="card-header">
+                                            <h5 class="card-title">Occupied Spaces</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <h3 class="card-title">{{occupied}}</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="col-md green">
+                                    <div class="card text-center text-dark  mb-3" id="Free-Spaces">
+                                        <div class="card-header">
+                                            <h5 class="card-title">Free Spaces</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <h3 class="card-title">{{free}}</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item-center">
+                                <a href="{% url 'loc1' %}" class="bttn">Details </a>
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+<!--<section>-->
+
+<!--    <div class="container">-->
+<!--            <div class="offer border" style="background:#EBECF0">-->
+<!--                <div class="small-container">-->
+<!--                    <div class ="row">-->
+<!--                        <div class="title">-->
+<!--                            <h2>Parking Space 2</h2>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <br>-->
+
+<!--                    <section>-->
+<!--                        <div class="row">-->
+<!--                            <div class="col">-->
+<!--                                <div class="col-md yellow">-->
+<!--                                    <div class="card text-center text-dark  mb-3" id="total-Space">-->
+<!--                                        <div class="card-header">-->
+<!--                                            <h5 class="card-title">Total Spaces</h5>-->
+<!--                                        </div>-->
+<!--                                        <div class="card-body">-->
+<!--                                            <h3 class="card-title style='color: #000'">{{total_space}}</h3>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+<!--                            <div class="col">-->
+<!--                                <div class="col-md red">-->
+<!--                                    <div class="card text-center text-dark  mb-3" id="Occupied-Spaces">-->
+<!--                                        <div class="card-header">-->
+<!--                                            <h5 class="card-title">Occupied Spaces</h5>-->
+<!--                                        </div>-->
+<!--                                        <div class="card-body">-->
+<!--                                            <h3 class="card-title">{{occupied}}</h3>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+<!--                            <div class="col">-->
+<!--                                <div class="col-md green">-->
+<!--                                    <div class="card text-center text-dark  mb-3" id="Free-Spaces">-->
+<!--                                        <div class="card-header">-->
+<!--                                            <h5 class="card-title">Free Spaces</h5>-->
+<!--                                        </div>-->
+<!--                                        <div class="card-body">-->
+<!--                                            <h3 class="card-title">{{free}}</h3>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="item-center">-->
+<!--                                <a href="{% url 'loc1' %}" class="bttn">Details </a>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </section>-->
+
+<!--                </div>-->
+<!--            </div>-->
+
+<!--        </div>-->
+<!--    </div>-->
+
+<!--</section>-->
+<!--<section>-->
+
+<!--    <div class="container">-->
+<!--            <div class="offer border" style="background:#EBECF0">-->
+<!--                <div class="small-container">-->
+<!--                    <div class ="row">-->
+<!--                        <div class="title">-->
+<!--                            <h2>Parking Space 3</h2>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <br>-->
+
+<!--                    <section>-->
+<!--                        <div class="row">-->
+<!--                            <div class="col">-->
+<!--                                <div class="col-md yellow">-->
+<!--                                    <div class="card text-center text-dark  mb-3" id="total-Space">-->
+<!--                                        <div class="card-header">-->
+<!--                                            <h5 class="card-title">Total Spaces</h5>-->
+<!--                                        </div>-->
+<!--                                        <div class="card-body">-->
+<!--                                            <h3 class="card-title style='color: #000'">{{total_space}}</h3>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+<!--                            <div class="col">-->
+<!--                                <div class="col-md red">-->
+<!--                                    <div class="card text-center text-dark  mb-3" id="Occupied-Spaces">-->
+<!--                                        <div class="card-header">-->
+<!--                                            <h5 class="card-title">Occupied Spaces</h5>-->
+<!--                                        </div>-->
+<!--                                        <div class="card-body">-->
+<!--                                            <h3 class="card-title">{{occupied}}</h3>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+<!--                            <div class="col">-->
+<!--                                <div class="col-md green">-->
+<!--                                    <div class="card text-center text-dark  mb-3" id="Free-Spaces">-->
+<!--                                        <div class="card-header">-->
+<!--                                            <h5 class="card-title">Free Spaces</h5>-->
+<!--                                        </div>-->
+<!--                                        <div class="card-body">-->
+<!--                                            <h3 class="card-title">{{free}}</h3>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="item-center">-->
+<!--                                <a href="{% url 'loc1' %}" class="bttn">Details </a>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </section>-->
+
+<!--                </div>-->
+<!--            </div>-->
+
+<!--        </div>-->
+<!--    </div>-->
+
+<!--</section>-->
+
+{%endblock%}
